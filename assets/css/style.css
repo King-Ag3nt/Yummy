@@ -159,6 +159,10 @@ form {
             color: #0D0D0D;
         }
     }
+    .alert {
+    text-align: center;
+    display: none;
+}
 }
 
 #contact {
@@ -168,10 +172,7 @@ form {
     justify-content: center;
 }
 
-form .alert {
-    text-align: center;
-    display: none;
-}
+
 
 
 
