@@ -179,12 +179,16 @@ function showSearch() {
 
 function searchByName(event) {
   let name = event.target.value;
-  getData(name);
+  if (name.length > 0) {
+    getData(name);
+  }
 }
 
 function searchByLetter(event) {
   let letter = event.target.value;
-  getLetterDetails(letter);
+  if (letter.length == 1) {
+    getLetterDetails(letter);
+  }
 }
 
 async function getLetterDetails(letter) {
