@@ -1,0 +1,197 @@
+body {
+    background-color: #0D0D0D;
+    color: white;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* cards Start */
+.dishCard {
+    overflow: hidden;
+    cursor: pointer;
+
+    .dishOverLay {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+        transition: all 0.5s ease;
+        display: flex;
+        align-items: center;
+        color: #0D0D0D;
+    }
+
+    &:hover .dishOverLay {
+        bottom: 0;
+    }
+}
+
+/* cards End */
+
+/* sidebar start */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 320px;
+    height: 100vh;
+    background-color: red;
+    transition: all 0.5s ease;
+    z-index: 888;
+
+
+    .sidebar-content {
+        background-color: #0D0D0D;
+        color: white;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-decoration: none;
+            overflow: hidden;
+            position: relative;
+
+
+            ul {
+                li {
+                    list-style: none;
+                    position: relative;
+                    top: 300px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .sidebar-Toggler {
+        width: 20%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        color: #0D0D0D;
+
+        .toggler {
+            cursor: pointer;
+
+            .fa-xmark {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+/* sidebar end */
+
+/* loading page start */
+.loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0D0D0D;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 100px;
+
+    i {
+        animation: rotate 1s infinite linear;
+    }
+
+
+}
+
+/* loading page end */
+
+
+
+.form-control {
+    background-color: #0D0D0D;
+    border: 1px solid grey;
+    color: white;
+
+    &:focus {
+        background-color: #0D0D0D;
+        color: white;
+    }
+
+    &::placeholder {
+        color: #6C757D;
+    }
+}
+
+.ing-card {
+    cursor: pointer;
+    max-height: 220px;
+    overflow: hidden;
+}
+
+
+#searchRow {
+    display: none;
+}
+
+form {
+    .form-control {
+        background-color: white;
+        color: #0D0D0D;
+
+        &:focus {
+            background-color: white;
+            color: #0D0D0D;
+        }
+    }
+}
+
+#contact {
+    display: none;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+form .alert {
+    text-align: center;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
